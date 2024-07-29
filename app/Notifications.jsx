@@ -2,15 +2,18 @@ import { View, Text, Dimensions, Switch } from "react-native";
 import React from "react";
 
 export default function Security() {
-  const [FaceId, setFaceId] = React.useState(false);
-  const FaceIdToggle = () => setFaceId((previousState) => !previousState);
+  const [PaymentId, setPaymentId] = React.useState(false);
+  const PaymentIdToggle = () => setPaymentId((previousState) => !previousState);
 
-  const [Password, setPassword] = React.useState(false);
-  const PasswordToggle = () => setPassword((previousState) => !previousState);
+  const [Schedule, setSchedule] = React.useState(false);
+  const ScheduleToggle = () => setSchedule((previousState) => !previousState);
 
-  const [TouchId, setTouchId] = React.useState(false);
-  const TouchIdToggle = () => setTouchId((previousState) => !previousState);
+  const [Message, setMessage] = React.useState(false);
+  const MessageToggle = () => setMessage((previousState) => !previousState);
   
+  const [Call, setCall] = React.useState(false);
+  const CallToggle = () => setCall((previousState) => !previousState);
+
   return (
     <View
       style={{
@@ -25,7 +28,7 @@ export default function Security() {
           padding: 20,
           borderWidth: 1,
           borderColor: "#e3e7ec",
-          height: 260,
+          height: 330,
           width: 300,
           borderRadius: 10,
           gap: 12,
@@ -41,13 +44,13 @@ export default function Security() {
             alignItems: "center",
           }}
         >
-          <Text style={{ fontSize: 18 }}>Face ID</Text>
+          <Text style={{ fontSize: 18 }}>Payment Reminder</Text>
           <Switch
             trackColor={{ false: "#f4f3f4", true: "skyblue" }}
-            thumbColor={FaceId ? "white" : "#f4f3f4"}
+            thumbColor={PaymentId ? "white" : "#f4f3f4"}
             ios_backgroundColor="#3e3e3e"
-            onValueChange={FaceIdToggle}
-            value={FaceId}
+            onValueChange={PaymentIdToggle}
+            value={PaymentId}
           />
         </View>
         <View
@@ -60,13 +63,13 @@ export default function Security() {
             alignItems: "center",
           }}
         >
-          <Text style={{ fontSize: 18 }}>Remember Password</Text>
+          <Text style={{ fontSize: 18 }}>Schedule Reminder</Text>
           <Switch
             trackColor={{ false: "#f4f3f4", true: "skyblue" }}
-            thumbColor={Password ? "white" : "#f4f3f4"}
+            thumbColor={Schedule ? "white" : "#f4f3f4"}
             ios_backgroundColor="#3e3e3e"
-            onValueChange={PasswordToggle}
-            value={Password}
+            onValueChange={ScheduleToggle}
+            value={Schedule}
           />
         </View>
         <View
@@ -79,13 +82,33 @@ export default function Security() {
             alignItems: "center",
           }}
         >
-          <Text style={{ fontSize: 18 }}>Touch ID</Text>
+          <Text style={{ fontSize: 18 }}>Message</Text>
           <Switch
             trackColor={{ false: "#f4f3f4", true: "skyblue" }}
-            thumbColor={TouchId ? "white" : "#f4f3f4"}
+            thumbColor={Message ? "white" : "#f4f3f4"}
             ios_backgroundColor="#3e3e3e"
-            onValueChange={TouchIdToggle}
-            value={TouchId}
+            onValueChange={MessageToggle}
+            value={Message}
+          />
+        </View>
+
+        <View
+          style={{ height: 1, width: 255, backgroundColor: "#e3e7ec" }}
+        ></View>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Text style={{ fontSize: 18 }}>Call</Text>
+          <Switch
+            trackColor={{ false: "#f4f3f4", true: "skyblue" }}
+            thumbColor={Call ? "white" : "#f4f3f4"}
+            ios_backgroundColor="#3e3e3e"
+            onValueChange={CallToggle}
+            value={Call}
           />
         </View>
       </View>

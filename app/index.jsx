@@ -15,6 +15,8 @@ import NewAddress from "../components/NewAddress";
 import ChangePassword from "./ChangePassword";
 import ForgotPassword from "./ForgotPassword";
 import Security from "./Security";
+import Notifications from "./Notifications";
+import Location from "./Location";
 
 export default function index() {
   const [splash, setSplash] = useState(true);
@@ -35,12 +37,14 @@ export default function index() {
       {/* <HomePage /> */}
       {/* {(splash ? <SplashScreen/> : <HomePage/> )} */}
       {/* <Profile/> */}
-      {/* <UserLogin /> */}
+      <UserLogin />
       {/* <ChangePassword/> */}
       {/* <MyAddress/> */}
       {/* <NewAddress /> */}
       {/* <ForgotPassword/> */}
-      <Security/>
+      {/* <Security/> */}
+      {/* <Notifications/> */}
+      {/* <Location/> */}
     </View>
   );
 }

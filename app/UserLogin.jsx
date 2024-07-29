@@ -243,7 +243,7 @@ const UserLogin = () => {
               </View>
             </Link>
 
-            <Link href={"Payment"}>
+            <Link href={"Notifications"}>
               <View
                 style={{
                   flexDirection: "row",
@@ -282,7 +282,7 @@ const UserLogin = () => {
               <Text style={{ fontWeight: 400 }}>General</Text>
             </View>
 
-            <Link href={"Payment"}>
+            <Link href={"Location"}>
               <View
                 style={{
                   flexDirection: "row",
