@@ -1,7 +1,8 @@
 import { View, Text, Dimensions, Switch, ScrollView } from "react-native";
 import React from "react";
+import { AntDesign } from '@expo/vector-icons';
 
-export default function Security() {
+export default function Language() {
   return (
     <ScrollView>
       <View
@@ -33,6 +34,7 @@ export default function Security() {
             }}
           >
             <Text style={{ fontSize: 20 }}>Hindi</Text>
+            <AntDesign name="checksquareo" size={24} color="black" style={{}}/>
           </View>
           <View
             style={{ height: 1, width: 255, backgroundColor: "#e3e7ec" }}

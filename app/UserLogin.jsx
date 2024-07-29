@@ -282,7 +282,7 @@ const UserLogin = () => {
               <Text style={{ fontWeight: 400 }}>General</Text>
             </View>
 
-            <Link href={"Location"}>
+            <Link href={"Language"}>
               <View
                 style={{
                   flexDirection: "row",
@@ -311,7 +311,7 @@ const UserLogin = () => {
               </View>
             </Link>
 
-            <Link href={"Payment"}>
+            {/* <Link href={"Payment"}> */}
               <View
                 style={{
                   flexDirection: "row",
@@ -338,7 +338,7 @@ const UserLogin = () => {
                 </View>
                 <Image source={arrow} style={{ tintColor: "#ababab" }} />
               </View>
-            </Link>
+            {/* </Link> */}
           </View>
 
           <View style={{}}>
@@ -346,7 +346,7 @@ const UserLogin = () => {
               <Text style={{ fontWeight: 400 }}>About</Text>
             </View>
 
-            <Link href={"Payment"}>
+            <Link href={"LegalPolicies"}>
               <View
                 style={{
                   flexDirection: "row",
@@ -375,7 +375,7 @@ const UserLogin = () => {
               </View>
             </Link>
 
-            <Link href={"Payment"}>
+            <Link href={"HelpSupport"}>
               <View
                 style={{
                   flexDirection: "row",
@@ -403,8 +403,6 @@ const UserLogin = () => {
                 <Image source={arrow} style={{ tintColor: "#ababab" }} />
               </View>
             </Link>
-
-            <Link href={"Payment"}>
               <View
                 style={{
                   flexDirection: "row",
@@ -437,7 +435,7 @@ const UserLogin = () => {
                   value={isEnabled}
                 />
               </View>
-            </Link>
+              
           </View>
         </View>
         <View style={{ alignItems: "center" }}>

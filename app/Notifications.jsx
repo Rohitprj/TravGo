@@ -1,7 +1,7 @@
 import { View, Text, Dimensions, Switch } from "react-native";
 import React from "react";
 
-export default function Security() {
+export default function Notifications() {
   const [PaymentId, setPaymentId] = React.useState(false);
   const PaymentIdToggle = () => setPaymentId((previousState) => !previousState);
 
