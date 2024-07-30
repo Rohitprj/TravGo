@@ -8,6 +8,7 @@ import card5 from "../assets/images/img5.jpg";
 import card6 from "../assets/images/img6.jpg";
 import { FontAwesome6 } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
+import { Link } from "expo-router";
 
 export default function MyWishlist() {
   const Wishlist = [
@@ -75,39 +76,41 @@ export default function MyWishlist() {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return (
-            <View style={{ marginRight: 18 }}>
-              <Image
-                source={item.img}
-                style={{ height: 150, width: 150, borderRadius: 10 }}
-              />
-              <Text style={{ fontSize: 18 }}>{item.PlaceName}</Text>
+            <Link style={{ marginRight: 18 }} href={"VacationDetails"}>
+              <View>
+                <Image
+                  source={item.img}
+                  style={{ height: 150, width: 150, borderRadius: 10 }}
+                />
+                <Text style={{ fontSize: 18 }}>{item.PlaceName}</Text>
 
-              <View
-                style={{ flexDirection: "row", gap: 8, paddingVertical: 4 }}
-              >
-                <FontAwesome6 name="location-dot" size={14} color="grey" />
-                <Text style={{ color: "grey", fontSize: 12 }}>
-                  {item.PlaceAdd}
-                </Text>
-              </View>
-              <View
-                style={{
-                  flexDirection: "row",
-                  gap: 8,
-                  paddingVertical: 10,
-                  justifyContent: "space-between",
-                }}
-              >
-                <Text style={{ fontSize: 16, fontWeight: 600 }}>
-                  {item.PlacePrice}
-                </Text>
+                <View
+                  style={{ flexDirection: "row", gap: 8, paddingVertical: 4 }}
+                >
+                  <FontAwesome6 name="location-dot" size={14} color="grey" />
+                  <Text style={{ color: "grey", fontSize: 12 }}>
+                    {item.PlaceAdd}
+                  </Text>
+                </View>
+                <View
+                  style={{
+                    flexDirection: "row",
+                    gap: 8,
+                    paddingVertical: 10,
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Text style={{ fontSize: 16, fontWeight: 600 }}>
+                    {item.PlacePrice}
+                  </Text>
 
-                <View style={{ gap: 5, flexDirection: "row" }}>
-                  <AntDesign name="star" size={16} color="#e3d005" />
-                  <Text style={{ color: "#e3d005" }}>{item.PlaceRating}</Text>
+                  <View style={{ gap: 5, flexDirection: "row" }}>
+                    <AntDesign name="star" size={16} color="#e3d005" />
+                    <Text style={{ color: "#e3d005" }}>{item.PlaceRating}</Text>
+                  </View>
                 </View>
               </View>
-            </View>
+            </Link>
           );
         }}
       />

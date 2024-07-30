@@ -18,6 +18,9 @@ import Security from "./Security";
 import Notifications from "./Notifications";
 import Language from "./Language";
 import HelpSupport from "./HelpSupport";
+import MyWishlist from "./MyWishlist";
+import Profile2 from "./Profile2";
+
 
 export default function index() {
   const [splash, setSplash] = useState(true);
@@ -46,7 +49,9 @@ export default function index() {
       {/* <Security/> */}
       {/* <Notifications/> */}
       {/* <Language/> */}
-      <HelpSupport/>
+      {/* <HelpSupport/> */}
+      {/* <MyWishlist/> */}
+      <Profile2/>
     </View>
   );
 }
