@@ -20,6 +20,8 @@ import Language from "./Language";
 import HelpSupport from "./HelpSupport";
 import MyWishlist from "./MyWishlist";
 import Profile2 from "./Profile2";
+import VacationDetails from "./VacationDetails";
+import DetailTicket from "./DetailTicket";
 
 
 export default function index() {
@@ -39,7 +41,10 @@ export default function index() {
       {/* <MyDateTimePicker /> */}
       {/* <SearchDestination /> */}
       {/* <HomePage /> */}
-      {/* {(splash ? <SplashScreen/> : <HomePage/> )} */}
+      <DetailTicket/>
+      {/* {(splash ? <SplashScreen/> : <DetailTicket/> )} */}
+      {/* {(splash ? <SplashScreen/> : <Profile2/> )} */}
+      {/* <VacationDetails/> */}
       {/* <Profile/> */}
       {/* <UserLogin /> */}
       {/* <ChangePassword/> */}
@@ -51,7 +56,8 @@ export default function index() {
       {/* <Language/> */}
       {/* <HelpSupport/> */}
       {/* <MyWishlist/> */}
-      <Profile2/>
+      {/* <HomePage/> */}
+      
     </View>
   );
 }

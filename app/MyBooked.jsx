@@ -11,6 +11,7 @@ import tajMahal from "../assets/images/tajMahal.jpg";
 import hotel from "../assets/images/hotel.png";
 import { Entypo } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
+import { Link } from "expo-router";
 
 export default function MyBooked() {
   const bookedList = [
@@ -39,7 +40,7 @@ export default function MyBooked() {
       Price: "Total Price",
       dollar: "$320",
       detailPg: "Detail",
-      active:true
+      active: true,
     },
     {
       id: 3,
@@ -102,7 +103,7 @@ export default function MyBooked() {
 
       <FlatList
         data={bookedList}
-        contentContainerStyle={{ gap: 30,paddingVertical:40 }}
+        contentContainerStyle={{ gap: 30, paddingVertical: 40 }}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return (
@@ -179,8 +180,20 @@ export default function MyBooked() {
                     {item.dollar}
                   </Text>
                 </View>
-                <View style={{ borderColor: "#3385ff", borderWidth: 1,borderRadius:40,padding:12,paddingHorizontal:45 }}>
-                  <Text style={{fontSize:16,color:"#3385ff"}}>{item.detailPg}</Text>
+                <View
+                  style={{
+                    borderColor: "#3385ff",
+                    borderWidth: 1,
+                    borderRadius: 40,
+                    padding: 12,
+                    paddingHorizontal: 45,
+                  }}
+                >
+                  <Link href={"DetailTicket"}>
+                    <Text style={{ fontSize: 16, color: "#3385ff" }}>
+                      {item.detailPg}
+                    </Text>
+                  </Link>
                 </View>
               </View>
             </View>

@@ -17,6 +17,7 @@ import { Feather, FontAwesome6 } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import MapView, { Marker, Polyline } from "react-native-maps";
 import { Drawer } from "expo-router/drawer";
+import { Link } from "expo-router";
 
 export default function index() {
   const tourGuide = [
@@ -130,34 +131,36 @@ export default function index() {
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => {
               return (
-                <View style={{ flexDirection: "row" }}>
-                  <Image
-                    source={item.img}
-                    style={{ height: 120, width: 120, borderRadius: 20 }}
-                  />
-                  <View style={{ paddingHorizontal: 15 }}>
-                    <Text style={{ fontWeight: 600, fontSize: 18 }}>
-                      {item.Name}
-                    </Text>
-                    <Text style={{ color: "grey", paddingVertical: 5 }}>
-                      {item.Price}
-                    </Text>
-                    <View
-                      style={{
-                        flexDirection: "row",
-                        gap: 10,
-                        paddingVertical: 10,
-                      }}
-                    >
-                      <FontAwesome6
-                        name="location-dot"
-                        size={16}
-                        color="black"
-                      />
-                      <Text style={{ color: "grey" }}>{item.location}</Text>
+                <Link href={"Profile2"}>
+                  <View style={{ flexDirection: "row" }}>
+                    <Image
+                      source={item.img}
+                      style={{ height: 120, width: 120, borderRadius: 20 }}
+                    />
+                    <View style={{ paddingHorizontal: 15 }}>
+                      <Text style={{ fontWeight: 600, fontSize: 18 }}>
+                        {item.Name}
+                      </Text>
+                      <Text style={{ color: "grey", paddingVertical: 5 }}>
+                        {item.Price}
+                      </Text>
+                      <View
+                        style={{
+                          flexDirection: "row",
+                          gap: 10,
+                          paddingVertical: 10,
+                        }}
+                      >
+                        <FontAwesome6
+                          name="location-dot"
+                          size={16}
+                          color="black"
+                        />
+                        <Text style={{ color: "grey" }}>{item.location}</Text>
+                      </View>
                     </View>
                   </View>
-                </View>
+                </Link>
               );
             }}
             horizontal
