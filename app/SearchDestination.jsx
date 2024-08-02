@@ -16,7 +16,7 @@ import card5 from "../assets/images/img5.jpg";
 import card6 from "../assets/images/img6.jpg";
 import { FontAwesome6 } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
-import {Link} from "expo-router";
+import { Link } from "expo-router";
 
 export default function SearchDestination() {
   const Wishlist = [
@@ -137,6 +137,7 @@ export default function SearchDestination() {
         horizontal
       />
       <FlatList
+        scrollEnabled={false}
         contentContainerStyle={{
           gap: 20,
           paddingBottom: 40,

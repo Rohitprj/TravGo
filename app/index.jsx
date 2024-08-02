@@ -41,9 +41,9 @@ export default function index() {
       {/* <MyDateTimePicker /> */}
       {/* <SearchDestination /> */}
       {/* <HomePage /> */}
-      <DetailTicket/>
+      {/* <DetailTicket/> */}
       {/* {(splash ? <SplashScreen/> : <DetailTicket/> )} */}
-      {/* {(splash ? <SplashScreen/> : <Profile2/> )} */}
+      {(splash ? <SplashScreen/> : <SearchDestination/> )}
       {/* <VacationDetails/> */}
       {/* <Profile/> */}
       {/* <UserLogin /> */}
