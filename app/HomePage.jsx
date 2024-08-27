@@ -1,8 +1,6 @@
 import { Image, Pressable, ScrollView, Text, View } from "react-native";
 import { Link } from "expo-router";
-// import { Drawer } from "expo-router/drawer";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { DrawerActions } from "@react-navigation/native";
 const menu = require("@/assets/images/menu.png");
 const darkMode = require("@/assets/images/sleep-mode.png");
 const user = require("@/assets/images/user.png");
@@ -27,7 +25,7 @@ export default function HomePage() {
             </Pressable>
           </View>
           <View style={{ alignSelf: "center" }}>
-            <Pressable onPress={() => DrawerActions.openDrawer()}>
+            <Pressable>
               <Image
                 source={darkMode}
                 style={{
@@ -41,7 +39,7 @@ export default function HomePage() {
               />
             </Pressable>
           </View>
-          <Link href={"UserLogin"}>
+          <Link href="./userLogin">
             <Image source={user} style={{ tintColor: "white" }} />
           </Link>
         </View>

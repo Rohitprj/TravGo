@@ -3,6 +3,11 @@ import React, { useState } from "react";
 import { ScrollView } from "react-native";
 import { Dropdown } from "react-native-element-dropdown";
 import Textarea from "react-native-textarea";
+// import {
+//   CountryData,
+//   CityData,
+//   StateData,
+// } from "../constants/DropdownListData";
 
 export default function NewAddress() {
   const [CountryValue, setCountyrValue] = useState(null);
@@ -70,7 +75,6 @@ export default function NewAddress() {
               }}
               placeholderTextColor="grey"
               placeholder="Enter Full Name/ Home/ Office"
-              // secureTextEntry={true}
             />
           </View>
         </View>

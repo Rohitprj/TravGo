@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, LogBox } from "react-native";
 import React from "react";
 import drawer, { Drawer } from "expo-router/drawer";
 import { Feather } from "@expo/vector-icons";
@@ -7,9 +7,15 @@ import HomePage from "./HomePage";
 import { Tabs } from "expo-router";
 
 export default function _layout() {
-  // const Drawer = createDrawerNavigator()
   return (
-    // <Tabs />
-    <Drawer />
+    <Drawer>
+      {/* <Drawer.Screen
+        name="SearchDestination"
+        options={{
+          drawerLabel: "SearchDestination",
+          title: "Destination",
+        }}
+      /> */}
+    </Drawer>
   );
 }

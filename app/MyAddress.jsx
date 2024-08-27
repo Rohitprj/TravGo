@@ -2,12 +2,11 @@ import { View, Text, Pressable, Dimensions } from "react-native";
 import React from "react";
 import { Octicons } from "@expo/vector-icons";
 import { Link } from "expo-router";
-import NewAddress from "../components/NewAddress";
 
 export default function MyAdderss() {
   return (
     <View style={{ paddingHorizontal: 30, paddingVertical: 50 }}>
-      <Link href={NewAddress} style={{ alignSelf: "flex-end" }}>
+      <Link href={"NewAddress"} style={{ alignSelf: "flex-end" }}>
         <Octicons name="diff-added" size={30} color="grey" />
       </Link>
 

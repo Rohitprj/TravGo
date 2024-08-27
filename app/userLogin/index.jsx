@@ -22,7 +22,7 @@ import { Entypo } from "@expo/vector-icons";
 import { SimpleLineIcons } from "@expo/vector-icons";
 import { Switch } from "react-native-gesture-handler";
 
-const UserLogin = () => {
+const index = () => {
   const [isEnabled, setIsEnabled] = React.useState(false);
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
 
@@ -85,7 +85,6 @@ const UserLogin = () => {
                   justifyContent: "space-between",
                   width: Dimensions.get("screen").width - 60,
                   paddingVertical: 10,
-                  // backgroundColor:"red"
                 }}
               >
                 <View
@@ -94,7 +93,7 @@ const UserLogin = () => {
                     gap: 30,
                   }}
                 >
-                  <Image source={location} style={{}} />
+                  <Image source={location} />
                   <Text
                     style={{
                       fontSize: 20,
@@ -312,32 +311,32 @@ const UserLogin = () => {
             </Link>
 
             {/* <Link href={"Payment"}> */}
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                width: Dimensions.get("screen").width - 60,
+                paddingVertical: 10,
+              }}
+            >
               <View
                 style={{
                   flexDirection: "row",
-                  justifyContent: "space-between",
-                  width: Dimensions.get("screen").width - 60,
-                  paddingVertical: 10,
+                  gap: 30,
                 }}
               >
-                <View
+                <Image source={Delete} style={{ marginTop: 5 }} />
+                <Text
                   style={{
-                    flexDirection: "row",
-                    gap: 30,
+                    fontSize: 20,
+                    fontWeight: 500,
                   }}
                 >
-                  <Image source={Delete} style={{ marginTop: 5 }} />
-                  <Text
-                    style={{
-                      fontSize: 20,
-                      fontWeight: 500,
-                    }}
-                  >
-                    Clear cache
-                  </Text>
-                </View>
-                <Image source={arrow} style={{ tintColor: "#ababab" }} />
+                  Clear cache
+                </Text>
               </View>
+              <Image source={arrow} style={{ tintColor: "#ababab" }} />
+            </View>
             {/* </Link> */}
           </View>
 
@@ -403,39 +402,38 @@ const UserLogin = () => {
                 <Image source={arrow} style={{ tintColor: "#ababab" }} />
               </View>
             </Link>
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                width: Dimensions.get("screen").width - 60,
+                paddingVertical: 10,
+              }}
+            >
               <View
                 style={{
                   flexDirection: "row",
-                  justifyContent: "space-between",
-                  width: Dimensions.get("screen").width - 60,
-                  paddingVertical: 10,
+                  gap: 35,
                 }}
               >
-                <View
+                <MaterialIcons name="dark-mode" size={24} color="black" />
+                <Text
                   style={{
-                    flexDirection: "row",
-                    gap: 35,
+                    fontSize: 20,
+                    fontWeight: 500,
                   }}
                 >
-                  <MaterialIcons name="dark-mode" size={24} color="black" />
-                  <Text
-                    style={{
-                      fontSize: 20,
-                      fontWeight: 500,
-                    }}
-                  >
-                    Dark Mode
-                  </Text>
-                </View>
-                <Switch
-                  trackColor={{ false: "#f4f3f4", true: "#ababab" }}
-                  thumbColor={isEnabled ? "grey" : "#f4f3f4"}
-                  ios_backgroundColor="#3e3e3e"
-                  onValueChange={toggleSwitch}
-                  value={isEnabled}
-                />
+                  Dark Mode
+                </Text>
               </View>
-              
+              <Switch
+                trackColor={{ false: "#f4f3f4", true: "#ababab" }}
+                thumbColor={isEnabled ? "grey" : "#f4f3f4"}
+                ios_backgroundColor="#3e3e3e"
+                onValueChange={toggleSwitch}
+                value={isEnabled}
+              />
+            </View>
           </View>
         </View>
         <View style={{ alignItems: "center" }}>
@@ -465,4 +463,4 @@ const UserLogin = () => {
   );
 };
 
-export default UserLogin;
+export default index;
