@@ -14,7 +14,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.rohit_kumar2001.travgo"
     },
     "web": {
       "bundler": "metro",
@@ -26,6 +27,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "eb20201e-edd4-45f2-ab97-13120e84a15f"
+      }
     }
   }
 }
