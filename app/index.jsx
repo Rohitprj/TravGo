@@ -2,14 +2,13 @@ import { View, Text } from "react-native";
 // import React, { useEffect, useState } from "react";
 import HomePage from "./HomePage";
 import MyBooked from "./MyBooked";
-// import MyDateTimePicker from "./DateTimePicker";
 import SearchDestination from "./SearchDestination";
 import HomePage2 from "./HomePage2";
-import MyComponent from "./ScrollLogic";
+// import MyComponent from "./ScrollLogic";
 import PagerComponent from "./HomePage2";
 import SplashScreen from "./SplashScreen";
 import Profile from "./Profile";
-// import UserLogin from "./userLogin";
+import UserLogin from "./userLogin";
 import MyAddress from "./MyAddress";
 // import NewAddress from "./NewAddress";
 import ChangePassword from "./ChangePassword";
@@ -33,13 +32,13 @@ export default function index() {
 
   return (
     <View>
-      {/* <HomePage2 /> */}
+      <HomePage2 />
       {/* <MyComponent/> */}
       {/* <PagerComponent/> */}
       {/* <MyBooked /> */}
       {/* <MyDateTimePicker /> */}
       {/* <SearchDestination /> */}
-      <HomePage />
+      {/* <HomePage /> */}
       {/* <DetailTicket/> */}
       {/* {(splash ? <SplashScreen/> : <DetailTicket/> )} */}
       {/* {(splash ? <SplashScreen/> : <SearchDestination/> )} */}

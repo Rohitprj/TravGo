@@ -62,20 +62,19 @@ export default function HomePage2() {
       id: 1,
       img: pic1,
       Name: "Rohit Kumar",
-      days:"3 days 2 night",
+      days: "3 days 2 night",
       location: "Delhi,India",
       Price: "$25/Person",
-
     },
     {
       id: 2,
       img: pic2,
       Name: "Rohit kumar",
-      days:"5 days 4 night",
+      days: "5 days 4 night",
       location: "Delhi,India",
       Price: "$30/Person",
     },
-  ]
+  ];
   return (
     <ScrollView
       style={{
@@ -83,9 +82,7 @@ export default function HomePage2() {
         backgroundColor: "white",
       }}
     >
-      <View 
-      style={{ gap: 20,paddingVertical:20}}
-      >
+      <View style={{ gap: 20, paddingVertical: 20 }}>
         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
           <View
             style={{
@@ -239,6 +236,7 @@ export default function HomePage2() {
         </Text>
 
         <FlatList
+          scrollEnabled={false}
           contentContainerStyle={{
             gap: 5,
           }}
@@ -282,22 +280,23 @@ export default function HomePage2() {
             );
           }}
           horizontal
-          scrollEnabled={false}
         />
 
-        <View style={{
+        <View
+          style={{
             flexDirection: "row",
             justifyContent: "space-between",
             // paddingVertical: 20,
-          }}>
-          <Text style={{fontSize: 22, fontWeight: 600 }}>Tour Guide</Text>
+          }}
+        >
+          <Text style={{ fontSize: 22, fontWeight: 600 }}>Tour Guide</Text>
           <Text style={{ color: "skyblue", alignSelf: "center", fontSize: 16 }}>
             See All
           </Text>
         </View>
 
         <FlatList
-          scrollEnabled={true}
+          // scrollEnabled={true}
           data={tourGuide}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => {
@@ -335,7 +334,6 @@ export default function HomePage2() {
           style={{
             flexDirection: "row",
             justifyContent: "space-between",
-            // paddingVertical: 20,
           }}
         >
           <Text style={{ fontSize: 22, fontWeight: 600 }}>On Budget Tour</Text>
@@ -345,7 +343,8 @@ export default function HomePage2() {
         </View>
 
         <FlatList
-        contentContainerStyle={{gap:20}}
+          scrollEnabled={false}
+          contentContainerStyle={{ gap: 20 }}
           data={BudgetTour}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => {
@@ -355,7 +354,7 @@ export default function HomePage2() {
                   source={item.img}
                   style={{ height: 100, width: 100, borderRadius: 20 }}
                 />
-                <View style={{ paddingHorizontal: 10}}>
+                <View style={{ paddingHorizontal: 10 }}>
                   <Text style={{ fontWeight: 600, fontSize: 18 }}>
                     {item.Name}
                   </Text>
@@ -373,14 +372,15 @@ export default function HomePage2() {
                     <Text style={{ color: "grey" }}>{item.location}</Text>
                   </View>
                 </View>
-                <View style={{justifyContent:"center"}}>
-                  <Text style={{fontSize:16,fontWeight:500}}>{item.Price}</Text>
+                <View style={{ justifyContent: "center" }}>
+                  <Text style={{ fontSize: 16, fontWeight: 500 }}>
+                    {item.Price}
+                  </Text>
                 </View>
               </View>
             );
           }}
         />
-
       </View>
     </ScrollView>
   );
