@@ -7,19 +7,19 @@ import {
   FlatList,
 } from "react-native";
 import React from "react";
-import boy from "../assets/images/boy.png";
+import boy from "../../assets/images/boy.png";
 import { FontAwesome6 } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
-import Hotel from "../assets/images/Hotel2.png";
-import airport from "../assets/images/airport.png";
-import carRental from "../assets/images/car-rental.png";
-import category from "../assets/images/category.png";
-import card1 from "../assets/images/img1.jpg";
-import card2 from "../assets/images/img2.jpg";
-import pic1 from "../assets/images/profile1.jpg";
-import pic2 from "../assets/images/profile2.jpg";
+import Hotel from "../../assets/images/Hotel2.png";
+import airport from "../../assets/images/airport.png";
+import carRental from "../../assets/images/car-rental.png";
+import category from "../../assets/images/category.png";
+import card1 from "../../assets/images/img1.jpg";
+import card2 from "../../assets/images/img2.jpg";
+import pic1 from "../../assets/images/profile1.jpg";
+import pic2 from "../../assets/images/profile2.jpg";
 import { ScrollView } from "react-native-gesture-handler";
 
 export default function HomePage2() {
