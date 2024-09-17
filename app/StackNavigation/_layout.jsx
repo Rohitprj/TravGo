@@ -1,16 +1,27 @@
 import { View, Text } from "react-native";
 import React from "react";
-import { Tabs } from "expo-router";
+import { Stack, Tabs } from "expo-router";
 
 export default function _layout() {
   return (
-    <Tabs>
-      <Tabs.Screen
-        name="HomePage2"
+    <Stack>
+      <Stack.Screen
+        name="UserLogin"
         options={{
-          tabBarLabel: "Home",
+          headerShown: false,
         }}
       />
-    </Tabs>
+    </Stack>
   );
+}
+
+{
+  /* <Tabs>
+  <Tabs.Screen
+    name="HomePage2"
+    options={{
+      tabBarLabel: "Home",
+    }}
+  />
+</Tabs>; */
 }

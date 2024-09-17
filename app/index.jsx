@@ -8,7 +8,7 @@ import HomePage2 from "./DrawerNavigation/HomePage2";
 // import PagerComponent from "./DrawerNavigation/HomePage2";
 import SplashScreen from "./SplashScreen";
 import Profile from "./Profile";
-import UserLogin from "./UserLogin";
+import UserLogin from "./StackNavigation/UserLogin";
 import MyAddress from "./MyAddress";
 // import NewAddress from "./NewAddress";
 import ChangePassword from "./ChangePassword";
