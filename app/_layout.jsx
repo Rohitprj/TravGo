@@ -35,7 +35,7 @@ export default function _layout() {
       <Drawer.Screen
         name="HomePage2"
         options={() => ({
-          headerTitle: '',
+          headerTitle: "",
           headerStyle: {
             backgroundColor: "#2196f3",
           },
@@ -47,12 +47,18 @@ export default function _layout() {
                 color="white"
                 style={{ marginRight: 15 }}
               />
-              <Link href="./userLogin" style={{ marginRight: 20 }}>
+              <Link href="./UserLogin" style={{ marginRight: 20 }}>
                 <FontAwesome6 name="user" size={28} color="white" />
               </Link>
             </View>
-          )
+          ),
         })}
+      />
+      <Drawer.Screen
+        name="UserLogin"
+        options={{
+          headerShown: false,
+        }}
       />
     </Drawer>
   );

@@ -28,7 +28,7 @@ const index = () => {
 
   return (
     <ScrollView>
-      <View style={{ paddingVertical: 30 }}>
+      <View style={{ paddingVertical: 50 }}>
         <View style={{ paddingHorizontal: 20 }}>
           <View
             style={{
