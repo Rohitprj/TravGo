@@ -250,4 +250,5 @@ export default function NewAddress() {
     </ScrollView>
   );
 }
+// Country list api
 // https://www.ipqualityscore.com/api/json/country/list
