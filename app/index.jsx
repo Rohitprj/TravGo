@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 import HomePage from "./HomePage";
 import MyBooked from "./MyBooked";
 import SearchDestination from "./SearchDestination";
-import HomePage2 from "./DrawerNavigation/HomePage2";
+import HomePage2 from "./HomePage2";
 // import MyComponent from "./ScrollLogic";
 // import PagerComponent from "./DrawerNavigation/HomePage2";
 import SplashScreen from "./SplashScreen";
